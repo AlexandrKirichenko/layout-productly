@@ -1,8 +1,14 @@
-html {
-    font-size: 10px;
-}
+@import "constants/constants";
 
-body {
-    font-size: 1.6rem;
-    font-family: 'Open Sans', Verdana;
-}
+// Base
+@import "base/base";
+@import "base/buttons";
+
+// Layouts
+@import "layouts/header";
+@import "layouts/wrapper";
+
+// Components
+@import "components/contact-us";
+@import "components/promo";
+
