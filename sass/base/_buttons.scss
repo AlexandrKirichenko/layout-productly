@@ -1,5 +1,5 @@
 .button {
-  font-family: 'Poppins',Verdana,sans-serif;
+  @extend %font-primary;
   padding: 11px 25px 13px;
   font-style: normal;
   font-weight: 600;
@@ -8,26 +8,33 @@
   border-radius: 4px;
   cursor: pointer;
   transition: all .3s;
+  &--bordered {
+    background: $color-light;
+    border: 1px solid $color-border;
+    color: $color-text;
+    &:hover {
+      background: $color-hovered;
+      border-color:$color-hovered;
+    }
+  }
+  &--colored {
+    background: $color-primary;
+    color: $color-light;
+    border: 1px solid $color-primary;
+    &:hover {
+      background: $color-additional;
+      border-color:$color-additional;
+    }
+  }
 }
 
-.button--bordered {
-  background: $color-light;
-  border: 1px solid $color-border;
-  color: $color-text;
+.link-button {
+  color: $color-primary;
+  @extend %font-additional;
+  display: inline-flex;
+  align-items: center;
 }
 
-.button--colored {
-  background: $color-primary;
-  color: $color-light;
-  border: 1px solid $color-primary;
-}
-
-.button--colored:hover {
-  background: $color-additional;
-  border-color:$color-additional;
-}
-
-.button--bordered:hover {
-  background: $color-hovered;
-  border-color:$color-hovered;
+.link-button__text {
+  margin-left: 9px;
 }

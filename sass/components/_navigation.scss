@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+
+//Элементы пишем отдельно, потому,что это затрудняет поиск,
+// а модификаторы можно писать внутри, т.к. он не мож. сущ без эл. или блока
+.navigation__link {
+  list-style: none;
+  padding: 0 10px;
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+  }
+}
